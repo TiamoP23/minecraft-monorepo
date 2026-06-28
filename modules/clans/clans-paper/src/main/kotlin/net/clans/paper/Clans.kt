@@ -1,11 +1,10 @@
-package de.tiamop23.clans
+package net.clans.paper
 
 import org.bukkit.plugin.java.JavaPlugin
 
 class Clans : JavaPlugin() {
 
     override fun onEnable() {
-        // Plugin startup logic
         logger.info("${this.name} enabled2")
     }
 

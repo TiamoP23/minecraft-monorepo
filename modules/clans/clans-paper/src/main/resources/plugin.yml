@@ -1,7 +1,7 @@
 name: Clans
 version: '${version}'
 
-main: de.tiamop23.clans.Clans
+main: net.clans.paper.Clans
 api-version: '26.2'
 load: POSTWORLD
 
