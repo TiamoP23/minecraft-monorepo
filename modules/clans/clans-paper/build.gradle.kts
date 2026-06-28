@@ -24,6 +24,7 @@ tasks {
 
     runServer {
         minecraftVersion(libs.versions.minecraft.get())
+        runDirectory.set(rootProject.file("run"))
         jvmArgs("-Xms2G", "-Xmx2G")
     }
 
