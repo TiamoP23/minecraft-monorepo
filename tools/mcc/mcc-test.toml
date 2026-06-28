@@ -1,0 +1,13 @@
+[Main]
+ServerIP = "127.0.0.1:25565"
+Login = "TestBot"
+
+[ChatBot.McpServer]
+Enabled = true
+Transport = { BindHost = "127.0.0.1", Port = 33333, Route = "/mcp", RequireAuthToken = true, AuthTokenEnvVar = "MCC_MCP_AUTH_TOKEN" }
+Capabilities = { SessionStatus = true, ChatAndCommands = true, Movement = true, Inventory = true, EntityWorld = true }
+
+[Advanced]
+InventoryHandling = true
+EntityHandling = true
+TerrainAndMovements = true

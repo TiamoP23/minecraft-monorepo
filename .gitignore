@@ -19,3 +19,11 @@ hs_err_pid*
 
 # Common working directory
 run
+
+# MCC binary
+tools/mcc/MinecraftClient*
+!tools/mcc/mcc-test.toml
+
+# Paperwright
+**/src/test/e2e/node_modules/
+**/src/test/e2e/dist/
