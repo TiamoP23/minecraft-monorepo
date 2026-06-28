@@ -1,4 +1,4 @@
-package net.clans.paper
+package de.tiamop23.minecraft.clans.paper
 
 import org.bukkit.plugin.java.JavaPlugin
 

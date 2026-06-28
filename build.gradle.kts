@@ -4,7 +4,7 @@ plugins {
 }
 
 allprojects {
-    group = "net.clans"
+    group = "de.tiamop23.minecraft"
     version = "0.1.0-SNAPSHOT"
 }
 

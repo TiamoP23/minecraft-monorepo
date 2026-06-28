@@ -17,7 +17,7 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "clans-ecosystem"
+rootProject.name = "minecraft-monorepo"
 
 include(
     ":modules:clans:clans-paper",
