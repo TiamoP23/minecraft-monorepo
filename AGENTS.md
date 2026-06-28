@@ -46,7 +46,7 @@ All dependency versions are declared in `gradle/libs.versions.toml`. Use `libs.*
 
 ## JVM Target
 
-All modules target JVM 21. Use `jvmToolchain(21)` in each module's `build.gradle.kts`.
+All modules target JVM 25 for Minecraft 26.2. Use `jvmToolchain(25)` in each module's `build.gradle.kts`.
 
 ## Core Module Policy
 
