@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.shadow)
     alias(libs.plugins.run.paper)
+    alias(libs.plugins.paperwright)
 }
 
 dependencies {
@@ -19,6 +20,11 @@ kotlin {
 }
 
 tasks {
+    paperwright {
+        minecraftVersion.set(libs.versions.minecraft.get())
+        testsDir.set(file("src/test/e2e"))
+    }
+
     build {
         dependsOn(shadowJar)
     }
