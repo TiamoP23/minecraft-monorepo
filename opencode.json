@@ -5,6 +5,14 @@
       "type": "remote",
       "url": "http://127.0.0.1:64342/stream",
       "enabled": true
+    },
+    "mcc": {
+      "type": "remote",
+      "url": "http://127.0.0.1:33333/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {env:MCC_MCP_AUTH_TOKEN}"
+      }
     }
   }
 }
