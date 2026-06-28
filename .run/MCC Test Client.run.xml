@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration name="MCC Test Client" type="Application" factoryName="Application">
+    <option name="PROGRAM_PARAMETERS" value="--config $PROJECT_DIR$/tools/mcc/mcc-test.toml" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/mcc" />
+    <envs>
+      <env name="MCC_MCP_AUTH_TOKEN" value="test-token" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>
