@@ -60,3 +60,18 @@ Core modules (e.g., `clans-core`, `proxy-core`, `friends-core`) must not depend 
 ./gradlew :modules:clans:clans-paper:jar                        # Build a plugin jar
 ./gradlew :modules:clans:clans-paper:runServer                  # Run test server
 ```
+
+## Code Formatting
+
+All Kotlin code is formatted with [ktfmt](https://facebook.github.io/ktfmt/) (kotlinlang style) via [Spotless](https://github.com/diffplug/spotless).
+
+```bash
+./gradlew spotlessCheck    # Verify formatting (runs on CI)
+./gradlew spotlessApply    # Auto-format all Kotlin files
+```
+
+### IntelliJ Setup
+
+Install the [ktfmt plugin](https://plugins.jetbrains.com/plugin/14912-ktfmt) from JetBrains Marketplace. This augments the Reformat Code action (`⌥⌘L`) to use ktfmt.
+
+**Agents:** Always run `./gradlew spotlessApply` before committing to ensure code is properly formatted.
