@@ -4,11 +4,6 @@ plugins {
     alias(libs.plugins.run.paper)
 }
 
-repositories {
-    mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/")
-}
-
 dependencies {
     compileOnly(libs.paper.api)
     implementation(libs.kotlin.stdlib)
@@ -19,7 +14,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(25)
 }
 
 tasks {
