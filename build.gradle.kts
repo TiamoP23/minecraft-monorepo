@@ -1,37 +1,15 @@
 plugins {
-    kotlin("jvm") version libs.versions.kotlin.get()
-    alias(libs.plugins.shadow)
-    alias(libs.plugins.run.paper)
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.shadow) apply false
 }
 
-repositories {
-    mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/")
+allprojects {
+    group = "net.clans"
+    version = "0.1.0-SNAPSHOT"
 }
 
-dependencies {
-    compileOnly(libs.paper.api)
-    implementation(libs.kotlin.stdlib)
-}
-
-kotlin {
-    jvmToolchain(25)
-}
-
-tasks {
-    build {
-        dependsOn(shadowJar)
-    }
-
-    runServer {
-        minecraftVersion(libs.versions.minecraft.get())
-        jvmArgs("-Xms2G", "-Xmx2G")
-    }
-
-    processResources {
-        val props = mapOf("version" to version)
-        filesMatching("plugin.yml") {
-            expand(props)
-        }
+subprojects {
+    tasks.withType<Test>().configureEach {
+        useJUnitPlatform()
     }
 }
