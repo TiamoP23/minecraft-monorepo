@@ -5,6 +5,7 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":modules:clans:clans-core"))
     compileOnly(libs.paper.api)
     implementation(libs.kotlin.stdlib)
 

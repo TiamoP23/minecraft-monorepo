@@ -20,5 +20,6 @@ plugins {
 rootProject.name = "minecraft-monorepo"
 
 include(
+    ":modules:clans:clans-core",
     ":modules:clans:clans-paper",
 )
