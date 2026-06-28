@@ -75,3 +75,28 @@ All Kotlin code is formatted with [ktfmt](https://facebook.github.io/ktfmt/) (ko
 Install the [ktfmt plugin](https://plugins.jetbrains.com/plugin/14912-ktfmt) from JetBrains Marketplace. This augments the Reformat Code action (`⌥⌘L`) to use ktfmt.
 
 **Agents:** Always run `./gradlew spotlessApply` before committing to ensure code is properly formatted.
+
+### Code Style Guidelines
+
+All Kotlin code uses [ktfmt](https://facebook.github.io/ktfmt/) (kotlinlang style) for formatting.
+
+In addition to ktfmt's auto-formatting, follow these conventions for empty lines between statement groups inside function bodies:
+
+- **Variable declarations** — group related `val`/`var` declarations together with no blank lines between them.
+- **Control statements** (`if`, `when`, `for`, `while`) — separate from preceding variable declarations with a blank line when they represent a distinct logical step.
+- **Return statements** — always precede a `return` (or trailing expression) with a blank line when it follows other statements.
+
+Example:
+
+```kotlin
+fun example(player: Player, target: Player): Boolean {
+    val attackerMode = pvpManager.getMode(player)
+    val victimMode = pvpManager.getMode(target)
+
+    if (attackerMode == PvPMode.OFF || victimMode == PvPMode.OFF) {
+        return false
+    }
+
+    return true
+}
+```
